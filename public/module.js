@@ -1,0 +1,1 @@
+angular.module('pieces', ['ngResource', 'ngRoute']);

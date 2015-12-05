@@ -1,0 +1,46 @@
+ <section ng-controller="PiecesController" data-ng-init="findOne()">
+              <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  <span ng-bind="piece.pieceTitle"></span>
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column" layout-align="center center">
+                  <md-content>
+                    <md-card style="height: 200; width: 200px;">
+                      <img src="{{piece.ImgURL}}">
+                    </md-card>
+                  
+                  <md-input-container>
+                    <label>Piece Artisan</label>
+                    <label ng-bind="piece.artisan">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Price</label>
+                    <Label ng-bind="piece.price">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Date Posted</label>
+                    <label ng-bind="piece.datePosted">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Piece Details</label>
+                    <label ng-bind="piece.descriptionBody">
+                  </md-input-container>
+                  
+                  <br>
+                </md-content>
+                <div layout="row">
+                    <md-button class="md-raised md-primary" flex>
+                         <a href="/#!/pieces/{{piece._id}}/edit">Update</a>
+                    </md-button>
+                    <md-button class="md-raised md-primary" flex>
+                         <a href="#" ng-click="delete();">Delete</a>
+                    </md-button>
+                </div>
+                </md-card-content>
+              </md-card>
+          </section>
